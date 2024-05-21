@@ -51,7 +51,7 @@ def make_dirs(_id):
     config = Config("config.yaml")
 
     if not config.train or not config.predict:
-        if not os.path.isdir('data/%s' %config.use_id):
+        if not os.path.isdir('../data_processing/data/%s' %config.use_id):
             raise ValueError("Run ID {} is not valid. If loading prior models or predictions, must provide valid ID.".format(_id))
 
     paths = ['data', 'data/%s' %_id, 'data/logs', 'data/%s/models' %_id, 'data/%s/smoothed_errors' %_id, 'data/%s/y_hat' %_id]

@@ -71,8 +71,8 @@ class Channel:
         Load train and test data from local.
         """
         try:
-            self.train = np.load(os.path.join("data", "train", "{}.npy".format(self.id)))
-            self.test = np.load(os.path.join("data", "test", "{}.npy".format(self.id)))
+            self.train = np.load(os.path.join("../data_processing/data", "train", "{}.npy".format(self.id)))
+            self.test = np.load(os.path.join("../data_processing/data", "test", "{}.npy".format(self.id)))
 
         except FileNotFoundError as e:
             logger.critical(e)
